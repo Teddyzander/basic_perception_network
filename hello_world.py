@@ -1,7 +1,5 @@
-print("hello_world")
+import numpy as np
 
-a = 2
-b = 5
-c = a + b
+numpy_array = np.array([[1, 2, 3],[4, 5, 6]])
 
-assert a + b == c
+print(numpy_array)
