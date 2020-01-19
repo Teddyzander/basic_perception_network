@@ -45,7 +45,7 @@ weight needs changing less.
 The training process itself is fairly simple:
 
 1. Put the training data through the network to get the neuron output.
-2. Calculate the error, which is the difference between the recieved output and the expected output.
+2. Calculate the error, which is the difference between the received output and the expected output.
 3. Depending on the size of the error, adjust the weights for each input.
 
 Repeat this process until satisfied with the result.
