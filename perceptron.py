@@ -28,6 +28,10 @@ for i in range(1):
 
     input_layer = training_inputs
 
+    # calculate an output
     outputs = sigmoid(np.dot(input_layer, weights))
+
+    # find how wrong the calculated output was against the expected output
+    error = outputs - training_outputs
 
 print("outputs after training: ", outputs)
