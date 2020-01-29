@@ -26,7 +26,11 @@ weights = 2 * np.random.random((3, 1)) - 1
 
 print("Weights before training: ", weights)
 
-for i in range(100000):
+for i in range(20000):
+
+    if i % 100000 == 0:
+        print(i)
+
     input_layer = training_inputs
 
     # calculate an output
@@ -42,3 +46,13 @@ for i in range(100000):
 
 print("Weights after training: ", weights)
 print("outputs after training: ", outputs)
+
+class PerceptronNetwork:
+
+    def __init__(self):
+        np.random.seed(1)
+
+        # create weights psuedo-randomly between -1 and 1 with a mean of 0
+        self.synaptic_weights = 2 * np.random.random((3, 1)) - 1
+
+
