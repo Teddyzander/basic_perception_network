@@ -34,3 +34,33 @@ class PerceptronNetwork:
         output = self.sigmoid(np.dot(inputs, self.synaptic_weights))
 
         return output
+
+
+if __name__ == "__main__":
+    perceptron_network = PerceptronNetwork()
+    print("Random Synaptic Weights:\n", perceptron_network.synaptic_weights)
+
+    # our training data
+    training_inputs = np.array([[0, 1, 1],
+                                [1, 1, 1],
+                                [1, 0, 1],
+                                [0, 1, 1]])
+
+    training_outputs = np.array([[0, 1, 1, 0]]).T
+
+    # run the neuron with the training data 10000 times
+    perceptron_network.train(training_inputs, training_outputs, 100000)
+
+    # results printed to console
+
+    print("Synaptic Weights Post Training:\n", perceptron_network.synaptic_weights)
+
+    # Allow the user to test the network
+    input_1 = str(input("Input 1: "))
+    input_2 = str(input("Input 2: "))
+    input_3 = str(input("Input 3: "))
+
+    print("Testing neuron with: ", input_1, input_2, input_3)
+    print("Neuron output: ", perceptron_network.think(np.array([input_1, input_2, input_3])))
+
+
