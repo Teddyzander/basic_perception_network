@@ -55,4 +55,8 @@ class PerceptronNetwork:
         # create weights psuedo-randomly between -1 and 1 with a mean of 0
         self.synaptic_weights = 2 * np.random.random((3, 1)) - 1
 
+    def sigmoid(self, x):
+        return 1 / (1 + np.exp(-x))
+
+
 
